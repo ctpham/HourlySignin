@@ -12,9 +12,17 @@ namespace HourlySign
 {
      public partial class Form1 : Form
      {
+        private ImportExcel _importer;
+
           public Form1()
           {
                InitializeComponent();
+               _importer = new ImportExcel();
           }
-     }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            List <CACE> caces = _importer.QueryData();
+        }
+    }
 }

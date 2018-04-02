@@ -1,0 +1,15 @@
+C:\Users\TEST\source\repos\HourlySignin\bin\Debug\HourlySign.exe.config
+C:\Users\TEST\source\repos\HourlySignin\bin\Debug\HourlySign.exe
+C:\Users\TEST\source\repos\HourlySignin\bin\Debug\HourlySign.pdb
+C:\Users\TEST\source\repos\HourlySignin\bin\Debug\LinqToExcel.dll
+C:\Users\TEST\source\repos\HourlySignin\bin\Debug\Remotion.Data.Linq.dll
+C:\Users\TEST\source\repos\HourlySignin\bin\Debug\Remotion.dll
+C:\Users\TEST\source\repos\HourlySignin\bin\Debug\Remotion.Interfaces.dll
+C:\Users\TEST\source\repos\HourlySignin\bin\Debug\LinqToExcel.xml
+C:\Users\TEST\source\repos\HourlySignin\obj\Debug\HourlySign.csprojResolveAssemblyReference.cache
+C:\Users\TEST\source\repos\HourlySignin\obj\Debug\HourlySign.Form1.resources
+C:\Users\TEST\source\repos\HourlySignin\obj\Debug\HourlySign.Properties.Resources.resources
+C:\Users\TEST\source\repos\HourlySignin\obj\Debug\HourlySign.csproj.GenerateResource.Cache
+C:\Users\TEST\source\repos\HourlySignin\obj\Debug\HourlySign.csproj.CoreCompileInputs.cache
+C:\Users\TEST\source\repos\HourlySignin\obj\Debug\HourlySign.exe
+C:\Users\TEST\source\repos\HourlySignin\obj\Debug\HourlySign.pdb
