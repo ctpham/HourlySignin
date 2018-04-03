@@ -8,7 +8,7 @@ namespace HourlySign
 {
     class CACE
     {
-        private string DateTime { get; }
+        private DateTime DateTime { get; }
         private string FirstName { get; }
         private string LastName { get; }
         private string Reason { get; }
@@ -17,11 +17,24 @@ namespace HourlySign
         public CACE(string dateTime, string firstName,
                 string lastName, string reason, string subject)
         {
-            DateTime = dateTime;
+            DateTime = parseDateTime(dateTime);
             FirstName = firstName;
             LastName = lastName;
             Reason = reason;
-            Subject = subject;
+            Subject = subject; 
+        }
+        
+        private DateTime parseDateTime(string dateTime)
+        {
+            string[] split = dateTime.Split(new Char[] { '/', ':', ' ' });
+            int month, day, year, hour, minute;
+            month = Int32.Parse(split[0]);
+            day = Int32.Parse(split[1]);
+            year = Int32.Parse(split[2]);
+            hour = Int32.Parse(split[3]);
+            minute = Int32.Parse(split[4]);
+
+            return new DateTime(year, month, day, hour, minute, 0);
         }
     }
 }
