@@ -26,7 +26,8 @@ namespace HourlySign
         
         private DateTime parseDateTime(string dateTime)
         {
-            string[] split = dateTime.Split(new Char[] { '/', ':', ' ' });
+            string[] split = dateTime.Split(new Char[] {'/', ':', ' '});
+
             int month, day, year, hour, minute;
             month = Int32.Parse(split[0]);
             day = Int32.Parse(split[1]);

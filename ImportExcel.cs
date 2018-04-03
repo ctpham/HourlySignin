@@ -15,9 +15,9 @@ namespace HourlySign
 
         public ImportExcel() { }
 
-        public List<CACE> QueryData(string fileName)
+        public List<CACE> QueryData(string filePath)
         {
-            _sheet = new ExcelQueryFactory(fileName);
+            _sheet = new ExcelQueryFactory(filePath);
             var rows = from c in _sheet.WorksheetNoHeader()
                        select c;
             List<CACE> caces = new List<CACE>();
@@ -27,7 +27,6 @@ namespace HourlySign
                 CACE cace = new CACE(row[0], row[1], row[2], row[3], row[4]);
                 caces.Add(cace);
             }
-
             return caces;
         }
 
@@ -36,7 +35,8 @@ namespace HourlySign
             string selectedFile = "";
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
 
-            openFileDialog1.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            openFileDialog1.InitialDirectory = Environment.GetFolderPath(
+                                               Environment.SpecialFolder.Desktop);
             openFileDialog1.Filter = "Excel files |*.xlsx; *.csv; *.xls";
             openFileDialog1.FilterIndex = 2;
             openFileDialog1.RestoreDirectory = true;
