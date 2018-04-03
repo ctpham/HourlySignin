@@ -13,9 +13,9 @@ namespace HourlySign
 
         public ImportExcel()
         {
-            //TODO: specify path to file
-            //add as parameter to constructor
-            _sheet = new ExcelQueryFactory(@"C:\Users\TEST\Desktop\CACE Numbers.xlsx");
+               //TODO: specify path to file
+               //add as parameter to constructor
+            _sheet = new ExcelQueryFactory(Form1.SelectedFile);
         }
 
         public List<CACE> QueryData()
