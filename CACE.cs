@@ -28,16 +28,30 @@ namespace HourlySign
         {
             string[] split = dateTime.Split(new Char[] {'/', ':', ' '});
 
-            int month, day, year, hour, minute;
+            int month, day, year, hour, minute, second;
+            string period; //AM or PM
             month = Int32.Parse(split[0]);
             day = Int32.Parse(split[1]);
             year = Int32.Parse(split[2]);
             hour = Int32.Parse(split[3]);
             minute = Int32.Parse(split[4]);
+            second = Int32.Parse(split[5]);
+            period = split[6];
 
-            return new DateTime(year, month, day, hour, minute, 0);
+            hour = convertToMilitaryTime(hour, period);
+
+            return new DateTime(year, month, day, hour, minute, second);
         }
 
+        private int convertToMilitaryTime(int hour, string period)
+        {
+            if (period.Equals("PM") && hour != 12)
+                hour += 12;
+            if (period.Equals("AM") && hour == 12)
+                hour += 12;
+            return hour;
+        }
+        
         public string ToString()
         {
             return DateTime.ToString() + " " + FirstName + " " +
