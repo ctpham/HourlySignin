@@ -16,6 +16,7 @@ namespace HourlySign
         private ImportExcel _importer;
         private string _filePath;
         List<CACE> _caces;
+        private string _projectDirectory;
 
         public Form1()
         {
@@ -26,6 +27,8 @@ namespace HourlySign
         {
             _importer = new ImportExcel();
             btnLoadData.Enabled = false;
+            _projectDirectory = Directory.GetParent(
+                                Directory.GetCurrentDirectory()).Parent.FullName;
         }
 
         private void btnOpenFile_Click(object sender, EventArgs e)
@@ -38,13 +41,26 @@ namespace HourlySign
         private void btnLoadData_Click(object sender, EventArgs e)
         {
             _caces = _importer.QueryData(_filePath);
+            string outputFile = _projectDirectory + "\\Resources\\output_data.txt";
+            //Debugging
+            printData(outputFile);
         }
 
-        private void isValidPath() 
+        private void isValidPath()
         {
             Path.GetFullPath(_filePath);
             //if exception is not thrown:
             btnLoadData.Enabled = true;
+        }
+
+        //To debug output
+        private void printData(string outputFile)
+        {
+            using (TextWriter tw = new StreamWriter(outputFile))
+            {
+                foreach (CACE cace in _caces)
+                    tw.WriteLine(cace.ToString());
+            }
         }
     }
 }

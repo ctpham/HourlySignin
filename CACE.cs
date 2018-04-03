@@ -37,5 +37,11 @@ namespace HourlySign
 
             return new DateTime(year, month, day, hour, minute, 0);
         }
+
+        public string ToString()
+        {
+            return DateTime.ToString() + " " + FirstName + " " +
+                   LastName + " " + Reason + " " + Subject;
+        }
     }
 }
