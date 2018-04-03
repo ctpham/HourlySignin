@@ -24,10 +24,17 @@ namespace HourlySign
 
             foreach(var row in rows)
             {
+                if(isHeader(row[0]))
+                    continue;
                 CACE cace = new CACE(row[0], row[1], row[2], row[3], row[4]);
                 caces.Add(cace);
             }
             return caces;
+        }
+
+        private bool isHeader(string elem)
+        {
+            return elem.All(char.IsLetter);
         }
 
         public string OpenFile()

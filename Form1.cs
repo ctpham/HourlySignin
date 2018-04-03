@@ -15,6 +15,7 @@ namespace HourlySign
     {
         private ImportExcel _importer;
         private string _filePath;
+        List<CACE> _caces;
 
         public Form1()
         {
@@ -24,17 +25,26 @@ namespace HourlySign
         private void Form1_Load(object sender, EventArgs e)
         {
             _importer = new ImportExcel();
+            btnLoadData.Enabled = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            List <CACE> caces = _importer.QueryData(_filePath);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void btnOpenFile_Click(object sender, EventArgs e)
         {
             _filePath = _importer.OpenFile();
-            txtFileName.Text = Path.GetFileName(_filePath);
+            txtFileName.Text = " " + Path.GetFileName(_filePath);
+            isValidPath();
+        }
+
+        private void btnLoadData_Click(object sender, EventArgs e)
+        {
+            _caces = _importer.QueryData(_filePath);
+        }
+
+        private void isValidPath() 
+        {
+            Path.GetFullPath(_filePath);
+            //if exception is not thrown:
+            btnLoadData.Enabled = true;
         }
     }
 }
