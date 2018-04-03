@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LinqToExcel;
+using System.IO;
+using System.Windows.Forms;
 
 namespace HourlySign
 {
@@ -11,15 +13,11 @@ namespace HourlySign
     {
         private ExcelQueryFactory _sheet;
 
-        public ImportExcel()
-        {
-               //TODO: specify path to file
-               //add as parameter to constructor
-            _sheet = new ExcelQueryFactory(Form1.SelectedFile);
-        }
+        public ImportExcel() { }
 
-        public List<CACE> QueryData()
+        public List<CACE> QueryData(string fileName)
         {
+            _sheet = new ExcelQueryFactory(fileName);
             var rows = from c in _sheet.WorksheetNoHeader()
                        select c;
             List<CACE> caces = new List<CACE>();
@@ -31,6 +29,23 @@ namespace HourlySign
             }
 
             return caces;
+        }
+
+        public string OpenFile()
+        {
+            string selectedFile = "";
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+
+            openFileDialog1.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            openFileDialog1.Filter = "Excel files |*.xlsx; *.csv; *.xls";
+            openFileDialog1.FilterIndex = 2;
+            openFileDialog1.RestoreDirectory = true;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                selectedFile = openFileDialog1.FileName;
+            }
+            return selectedFile;
         }
     }
 }
