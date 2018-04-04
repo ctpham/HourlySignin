@@ -14,8 +14,9 @@ namespace HourlySign
     public partial class Form1 : Form
     {
         private ImportExcel _importer;
+        private List<CACE> _caces;
+        private HashSet<DateTime> _dateTimeSet;
         private string _filePath;
-        List<CACE> _caces;
         private string _projectDirectory;
 
         public Form1()
@@ -27,6 +28,7 @@ namespace HourlySign
         {
             _importer = new ImportExcel();
             btnLoadData.Enabled = false;
+            _dateTimeSet = new HashSet<DateTime>();
             _projectDirectory = Directory.GetParent(
                                 Directory.GetCurrentDirectory()).Parent.FullName;
         }
@@ -41,9 +43,24 @@ namespace HourlySign
         private void btnLoadData_Click(object sender, EventArgs e)
         {
             _caces = _importer.QueryData(_filePath);
-            string outputFile = _projectDirectory + "\\Resources\\output_data.txt";
+            createDateTimeSet();
+
             //Debugging
+            string outputFile = _projectDirectory + "\\Resources\\output_data.txt";
             printData(outputFile);
+        }
+
+        private void createDateTimeSet()
+        {
+            foreach (CACE cace in _caces)
+            {
+                int year = cace.DateTime.Year;
+                int month = cace.DateTime.Month;
+                int day = cace.DateTime.Day;
+                DateTime dt = new DateTime(year, month, day);
+
+                _dateTimeSet.Add(dt);
+            }
         }
 
         private void isValidPath()

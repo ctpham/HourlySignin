@@ -8,11 +8,11 @@ namespace HourlySign
 {
     class CACE
     {
-        private DateTime DateTime { get; }
-        private string FirstName { get; }
-        private string LastName { get; }
-        private string Reason { get; }
-        private string Subject { get; }
+        public DateTime DateTime { get; }
+        public string FirstName { get; }
+        public string LastName { get; }
+        public string Reason { get; }
+        public string Subject { get; }
 
         public CACE(string dateTime, string firstName,
                 string lastName, string reason, string subject)
