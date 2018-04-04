@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HourlySign
 {
-    class CACE
+    class CACE : IComparable<CACE>
     {
         public DateTime DateTime { get; }
         public string FirstName { get; }
@@ -56,6 +56,11 @@ namespace HourlySign
         {
             return DateTime.ToString() + " " + FirstName + " " +
                    LastName + " " + Reason + " " + Subject;
+        }
+
+        public int CompareTo(CACE other)
+        {
+            return this.DateTime.CompareTo(other.DateTime);
         }
     }
 }

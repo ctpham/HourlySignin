@@ -28,21 +28,21 @@
           /// </summary>
           private void InitializeComponent()
           {
-            this.btnLoadData = new System.Windows.Forms.Button();
+            this.btnRun = new System.Windows.Forms.Button();
             this.btnOpenFile = new System.Windows.Forms.Button();
             this.txtFileName = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // btnLoadData
+            // btnRun
             // 
-            this.btnLoadData.Location = new System.Drawing.Point(148, 88);
-            this.btnLoadData.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnLoadData.Name = "btnLoadData";
-            this.btnLoadData.Size = new System.Drawing.Size(128, 95);
-            this.btnLoadData.TabIndex = 0;
-            this.btnLoadData.Text = "LoadData";
-            this.btnLoadData.UseVisualStyleBackColor = true;
-            this.btnLoadData.Click += new System.EventHandler(this.btnLoadData_Click);
+            this.btnRun.Location = new System.Drawing.Point(150, 76);
+            this.btnRun.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnRun.Name = "btnRun";
+            this.btnRun.Size = new System.Drawing.Size(122, 58);
+            this.btnRun.TabIndex = 0;
+            this.btnRun.Text = "Run";
+            this.btnRun.UseVisualStyleBackColor = true;
+            this.btnRun.Click += new System.EventHandler(this.btnRun_Click);
             // 
             // btnOpenFile
             // 
@@ -65,10 +65,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(426, 235);
+            this.ClientSize = new System.Drawing.Size(426, 160);
             this.Controls.Add(this.txtFileName);
             this.Controls.Add(this.btnOpenFile);
-            this.Controls.Add(this.btnLoadData);
+            this.Controls.Add(this.btnRun);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Form1";
             this.Text = "Hourly Sign-In";
@@ -80,7 +80,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnLoadData;
+        private System.Windows.Forms.Button btnRun;
           private System.Windows.Forms.Button btnOpenFile;
         private System.Windows.Forms.TextBox txtFileName;
     }

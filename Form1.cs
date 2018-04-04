@@ -15,7 +15,7 @@ namespace HourlySign
     {
         private ImportExcel _importer;
         private List<CACE> _caces;
-        private HashSet<DateTime> _dateTimeSet;
+        private SortedSet<DateTime> _dateTimeSet;
         private string _filePath;
         private string _projectDirectory;
 
@@ -27,8 +27,8 @@ namespace HourlySign
         private void Form1_Load(object sender, EventArgs e)
         {
             _importer = new ImportExcel();
-            btnLoadData.Enabled = false;
-            _dateTimeSet = new HashSet<DateTime>();
+            btnRun.Enabled = false;
+            _dateTimeSet = new SortedSet<DateTime>();
             _projectDirectory = Directory.GetParent(
                                 Directory.GetCurrentDirectory()).Parent.FullName;
         }
@@ -40,14 +40,55 @@ namespace HourlySign
             isValidPath();
         }
 
-        private void btnLoadData_Click(object sender, EventArgs e)
+        private void btnRun_Click(object sender, EventArgs e)
         {
             _caces = _importer.QueryData(_filePath);
             createDateTimeSet();
 
+            _caces.Sort();
+
+            List<Week> validWeeks = createValidWeeks();
+
             //Debugging
             string outputFile = _projectDirectory + "\\Resources\\output_data.txt";
             printData(outputFile);
+        }
+
+        //_dateTimeSet and _caces should be sorted before this is called
+        private List<Week> createValidWeeks()
+        {
+            List<Week> weeks = new List<Week>();
+            foreach (DateTime dt in _dateTimeSet)
+            {
+                //if no week in weeks
+                //create new week and add it to list of weeks
+                if (!weeks.Any())
+                {
+                    Week week = new Week();
+                    week.SetWeekRange(dt);
+                    weeks.Add(week);
+                }
+                //else check if dt fits in any week
+                //if not, add it to a new week
+                else
+                {
+                    bool needAnotherWeek = true;
+                    foreach (Week week in weeks)
+                    {
+                        if (week.FitsInDateRange(dt))
+                        {
+                            needAnotherWeek = false;
+                        }
+                    }
+                    if (needAnotherWeek)
+                    {
+                        Week week = new Week();
+                        week.SetWeekRange(dt);
+                        weeks.Add(week);
+                    }
+                }
+            }
+            return weeks;
         }
 
         private void createDateTimeSet()
@@ -67,7 +108,7 @@ namespace HourlySign
         {
             Path.GetFullPath(_filePath);
             //if exception is not thrown:
-            btnLoadData.Enabled = true;
+            btnRun.Enabled = true;
         }
 
         //To debug output
