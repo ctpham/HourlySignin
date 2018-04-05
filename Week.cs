@@ -37,8 +37,10 @@ namespace HourlySign
         public int[,] HourlyTimeframe { get; }
         private bool _hasData;
         List<DateTime> _dateRange;
+        private string _projectDirectory = Directory.GetParent(
+                                Directory.GetCurrentDirectory()).Parent.FullName;
 
-        public Week()
+          public Week()
         {
             HourlyTimeframe = new int[15,7];
             _dateRange = new List<DateTime>();
@@ -96,7 +98,7 @@ namespace HourlySign
         public void Print()
         {
                // Is there a way to get _projectDirectory from Form1?
-               string outputFile = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\Resources\\weeks.txt";
+               string outputFile = _projectDirectory + "\\Resources\\weeks.txt";
                using (TextWriter tw = new StreamWriter(outputFile, append: true))
                {
                     //print header here of weekdays
@@ -107,7 +109,6 @@ namespace HourlySign
                          {
                               tw.Write(HourlyTimeframe[hourRange, dayOfWeek] + "\t");
                          }
-                         tw.Write(tw.NewLine);
                          tw.Write(tw.NewLine);
                     }
                }
