@@ -40,6 +40,7 @@ namespace HourlySign
             isValidPath();
         }
 
+        //"Main()"
         private void btnRun_Click(object sender, EventArgs e)
         {
             _caces = _importer.QueryData(_filePath);
@@ -48,6 +49,12 @@ namespace HourlySign
             _caces.Sort();
 
             List<Week> validWeeks = createValidWeeks();
+
+            List<Week> dataWeeks = fillWeeksWithData(validWeeks);
+
+            totalEachDay(dataWeeks);
+
+            printWeeks(dataWeeks);
 
             //Debugging
             string outputFile = _projectDirectory + "\\Resources\\output_data.txt";
@@ -91,6 +98,30 @@ namespace HourlySign
             return weeks;
         }
 
+        private List<Week> fillWeeksWithData(List<Week> validWeeks)
+        {
+            foreach (CACE cace in _caces)
+            {
+                foreach (Week validWeek in validWeeks)
+                {
+                    if (validWeek.FitsInDateRange(cace.DateTime))
+                    {
+                        validWeek.PutData(cace.DateTime);
+                        break;
+                    }
+                }
+            }
+            return validWeeks;
+        }
+
+        private void totalEachDay(List<Week> dataWeeks)
+        {
+            foreach (Week week in dataWeeks)
+            {
+                week.TotalEachDay();
+            }
+        }
+
         private void createDateTimeSet()
         {
             foreach (CACE cace in _caces)
@@ -118,6 +149,14 @@ namespace HourlySign
             {
                 foreach (CACE cace in _caces)
                     tw.WriteLine(cace.ToString());
+            }
+        }
+        
+        private void printWeeks(List<Week> weeks)
+        {
+            foreach (Week week in weeks)
+            {
+                week.Print();
             }
         }
     }

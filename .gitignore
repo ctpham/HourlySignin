@@ -7,3 +7,7 @@ obj/Debug/HourlySign.csproj.GenerateResource.Cache
 obj/Debug/HourlySign.csprojResolveAssemblyReference.cache
 obj/Debug/HourlySign.exe
 obj/Debug/HourlySign.pdb
+*.exe
+obj/Debug/HourlySign.pdb
+*.pdb
+.vs/HourlySign/v14/.suo
