@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 //HourlyTimeframe[0][x] is between 9:00-9:59 AM
 //HourlyTimeframe[1][x] is between 10:00-10:59 AM
@@ -93,14 +95,22 @@ namespace HourlySign
         //TODO
         public void Print()
         {
-            //print header here of weekdays
-            for (int hourRange = 0; hourRange < HourlyTimeframe.GetLength(0); hourRange++)
-            {
-                for (int dayOfWeek = 0; dayOfWeek < HourlyTimeframe.GetLength(1); dayOfWeek++)
-                {
-                    //TODO
-                }
-            }
+               // Is there a way to get _projectDirectory from Form1?
+               string outputFile = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\Resources\\weeks.txt";
+               using (TextWriter tw = new StreamWriter(outputFile, append: true))
+               {
+                    //print header here of weekdays
+                    tw.WriteLine("S" + "\t" + "M" + "\t" + "T" + "\t" + "W" + "\t" + "R" + "\t" + "F" + "\t" + "S");
+                    for (int hourRange = 0; hourRange < HourlyTimeframe.GetLength(0); hourRange++)
+                    {
+                         for (int dayOfWeek = 0; dayOfWeek < HourlyTimeframe.GetLength(1); dayOfWeek++)
+                         {
+                              tw.Write(HourlyTimeframe[hourRange, dayOfWeek] + "\t");
+                         }
+                         tw.Write(tw.NewLine);
+                         tw.Write(tw.NewLine);
+                    }
+               }
         }
     }
 }

@@ -154,7 +154,7 @@ namespace HourlySign
         
         private void printWeeks(List<Week> weeks)
         {
-            foreach (Week week in weeks)
+               foreach (Week week in weeks) // Loops through each week and then prints itself
             {
                 week.Print();
             }
