@@ -95,22 +95,22 @@ namespace HourlySign
         //TODO
         public void Print()
         {
-               // Is there a way to get _projectDirectory from Form1?
-               string outputFile = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\Resources\\weeks.txt";
-               using (TextWriter tw = new StreamWriter(outputFile, append: true))
-               {
-                    //print header here of weekdays
-                    tw.WriteLine("S" + "\t" + "M" + "\t" + "T" + "\t" + "W" + "\t" + "R" + "\t" + "F" + "\t" + "S");
-                    for (int hourRange = 0; hourRange < HourlyTimeframe.GetLength(0); hourRange++)
+            // Is there a way to get _projectDirectory from Form1?
+            string outputFile = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\Resources\\weeks.txt";
+            using (TextWriter tw = new StreamWriter(outputFile, append: true))
+            {
+                //print header here of weekdays
+                tw.WriteLine("S" + "\t" + "M" + "\t" + "T" + "\t" + "W" + "\t" + "R" + "\t" + "F" + "\t" + "S");
+                for (int hourRange = 0; hourRange < HourlyTimeframe.GetLength(0); hourRange++)
+                {
+                    for (int dayOfWeek = 0; dayOfWeek < HourlyTimeframe.GetLength(1); dayOfWeek++)
                     {
-                         for (int dayOfWeek = 0; dayOfWeek < HourlyTimeframe.GetLength(1); dayOfWeek++)
-                         {
-                              tw.Write(HourlyTimeframe[hourRange, dayOfWeek] + "\t");
-                         }
-                         tw.Write(tw.NewLine);
-                         tw.Write(tw.NewLine);
+                        tw.Write(HourlyTimeframe[hourRange, dayOfWeek] + "\t");
                     }
-               }
+                    tw.WriteLine("");
+                }
+                tw.WriteLine("");
+            }
         }
     }
 }

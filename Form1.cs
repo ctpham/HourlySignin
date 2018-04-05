@@ -57,8 +57,8 @@ namespace HourlySign
             printWeeks(dataWeeks);
 
             //Debugging
-            string outputFile = _projectDirectory + "\\Resources\\output_data.txt";
-            printData(outputFile);
+            //string outputFile = _projectDirectory + "\\Resources\\output_data.txt";
+            //printData(outputFile);
         }
 
         //_dateTimeSet and _caces should be sorted before this is called
@@ -154,7 +154,11 @@ namespace HourlySign
         
         private void printWeeks(List<Week> weeks)
         {
-               foreach (Week week in weeks) // Loops through each week and then prints itself
+            //clear contents of file from last run (since we always append)
+            string weeksTxt = _projectDirectory + "\\Resources\\weeks.txt";
+            File.WriteAllText(weeksTxt, String.Empty);
+
+            foreach (Week week in weeks) // Loops through each week and then prints itself
             {
                 week.Print();
             }
