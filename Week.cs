@@ -37,8 +37,10 @@ namespace HourlySign
         public int[,] HourlyTimeframe { get; }
         private bool _hasData;
         List<DateTime> _dateRange;
+        private string _projectDirectory = Directory.GetParent(
+                                Directory.GetCurrentDirectory()).Parent.FullName;
 
-        public Week()
+          public Week()
         {
             HourlyTimeframe = new int[15,7];
             _dateRange = new List<DateTime>();
@@ -95,6 +97,7 @@ namespace HourlySign
         //TODO
         public void Print()
         {
+<<<<<<< HEAD
             // Is there a way to get _projectDirectory from Form1?
             string outputFile = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.FullName + "\\Resources\\weeks.txt";
             using (TextWriter tw = new StreamWriter(outputFile, append: true))
@@ -106,6 +109,21 @@ namespace HourlySign
                     for (int dayOfWeek = 0; dayOfWeek < HourlyTimeframe.GetLength(1); dayOfWeek++)
                     {
                         tw.Write(HourlyTimeframe[hourRange, dayOfWeek] + "\t");
+=======
+               // Is there a way to get _projectDirectory from Form1?
+               string outputFile = _projectDirectory + "\\Resources\\weeks.txt";
+               using (TextWriter tw = new StreamWriter(outputFile, append: true))
+               {
+                    //print header here of weekdays
+                    tw.WriteLine("S" + "\t" + "M" + "\t" + "T" + "\t" + "W" + "\t" + "R" + "\t" + "F" + "\t" + "S");
+                    for (int hourRange = 0; hourRange < HourlyTimeframe.GetLength(0); hourRange++)
+                    {
+                         for (int dayOfWeek = 0; dayOfWeek < HourlyTimeframe.GetLength(1); dayOfWeek++)
+                         {
+                              tw.Write(HourlyTimeframe[hourRange, dayOfWeek] + "\t");
+                         }
+                         tw.Write(tw.NewLine);
+>>>>>>> 862773f1f5d426135da7e34717842d607d7a6a2f
                     }
                     tw.WriteLine("");
                 }
