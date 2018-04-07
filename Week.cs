@@ -71,8 +71,13 @@ namespace HourlySign
                 if (dt.Date == dtOfWeek.Date)
                 {
                     int hour = hourToArrayElement(dt.Hour);
-                    HourlyTimeframe[hour, day] += 1;
-                    break;
+                    //Prevents accumulating data of students who
+                    //signed in before 9 AM or after 11 PM
+                    if (hour >= 0 && hour <= 13)
+                    {
+                        HourlyTimeframe[hour, day] += 1;
+                        break;
+                    }
                 }
                 day++;
             }
@@ -97,6 +102,7 @@ namespace HourlySign
         //TODO
         public void Print()
         {
+            String headerPadding = ("              ");
             String monday = String.Format("{0:M/d}", _dateRange[1]);
             String tuesday = String.Format("{0:M/d}", _dateRange[2]);
             String wednesday = String.Format("{0:M/d}", _dateRange[3]);
@@ -125,21 +131,27 @@ namespace HourlySign
             using (TextWriter tw = new StreamWriter(outputFile, append: true))
             {
                 //print header here of weekdays
-                tw.WriteLine("\t\t\t\t\t" + monthYear);
-                tw.WriteLine("\t\t\t" + "  " + "M" + "\t\t" + "T" + "\t\t" + "W" + "\t\t" + "R" + "\t\t" + "F");
-                tw.WriteLine(String.Format("\t\t\t  {0}\t{1}\t{2}\t{3}\t{4}",
-                             monday, tuesday, wednesday, thursday, friday));
+                tw.WriteLine(monthYear.PadLeft(30));
+                tw.WriteLine(headerPadding + "M".PadRight(7) + "T".PadRight(7) + 
+                             "W".PadRight(7) + "R".PadRight(7) + "F");
+                tw.WriteLine(headerPadding + monday.PadRight(7) + tuesday.PadRight(7) +
+                             wednesday.PadRight(7) + thursday.PadRight(7) + friday);
                 for (int hourRange = 0; hourRange < HourlyTimeframe.GetLength(0); hourRange++)
                 {
                     tw.Write(timestamp[hourRange]);
                     for (int dayOfWeek = 1; dayOfWeek < HourlyTimeframe.GetLength(1)-1; dayOfWeek++)
                     {
-                        tw.Write(HourlyTimeframe[hourRange, dayOfWeek] + "\t\t");
+                        tw.Write(HourlyTimeframe[hourRange, dayOfWeek].ToString().PadRight(7));
                     }
                     tw.Write(tw.NewLine);
                 }
                 tw.WriteLine("");
             }
+        }
+
+        private String padBoth(String s, int leftPad, int rightPad)
+        {
+            return s.PadLeft(leftPad, ' ').PadRight(rightPad, ' ');
         }
     }
 }
