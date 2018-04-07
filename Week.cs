@@ -97,18 +97,46 @@ namespace HourlySign
         //TODO
         public void Print()
         {
+            String monday = String.Format("{0:M/d}", _dateRange[1]);
+            String tuesday = String.Format("{0:M/d}", _dateRange[2]);
+            String wednesday = String.Format("{0:M/d}", _dateRange[3]);
+            String thursday = String.Format("{0:M/d}", _dateRange[4]);
+            String friday = String.Format("{0:M/d}", _dateRange[5]);
+
+            String monthYear = _dateRange[0].ToString("MMMM") + " " + _dateRange[0].Year;
+
+            String[] timestamp = {"09:00-09:59 > ",
+                                  "10:00-10:59 > ",
+                                  "11:00-11:59 > ",
+                                  "12:00-12:59 > ",
+                                  "01:00-01:59 > ",
+                                  "02:00-02:59 > ",
+                                  "03:00-03:59 > ",
+                                  "04:00-04:59 > ",
+                                  "05:00-05:59 > ",
+                                  "06:00-06:59 > ",
+                                  "07:00-07:59 > ",
+                                  "08:00-08:59 > ",
+                                  "09:00-09:59 > ",
+                                  "10:00-10:59 > ",
+                                  "Totals      > "};
+
             string outputFile = _projectDirectory + "\\Resources\\weeks.txt";
             using (TextWriter tw = new StreamWriter(outputFile, append: true))
             {
                 //print header here of weekdays
-                tw.WriteLine("S" + "\t" + "M" + "\t" + "T" + "\t" + "W" + "\t" + "R" + "\t" + "F" + "\t" + "S");
+                tw.WriteLine("\t\t\t\t\t" + monthYear);
+                tw.WriteLine("\t\t\t" + "  " + "M" + "\t\t" + "T" + "\t\t" + "W" + "\t\t" + "R" + "\t\t" + "F");
+                tw.WriteLine(String.Format("\t\t\t  {0}\t{1}\t{2}\t{3}\t{4}",
+                             monday, tuesday, wednesday, thursday, friday));
                 for (int hourRange = 0; hourRange < HourlyTimeframe.GetLength(0); hourRange++)
                 {
-                        for (int dayOfWeek = 0; dayOfWeek < HourlyTimeframe.GetLength(1); dayOfWeek++)
-                        {
-                            tw.Write(HourlyTimeframe[hourRange, dayOfWeek] + "\t");
-                        }
-                        tw.Write(tw.NewLine);
+                    tw.Write(timestamp[hourRange]);
+                    for (int dayOfWeek = 1; dayOfWeek < HourlyTimeframe.GetLength(1)-1; dayOfWeek++)
+                    {
+                        tw.Write(HourlyTimeframe[hourRange, dayOfWeek] + "\t\t");
+                    }
+                    tw.Write(tw.NewLine);
                 }
                 tw.WriteLine("");
             }
