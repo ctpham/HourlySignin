@@ -41,3 +41,4 @@ C:\Users\Thuy\Desktop\Latosha\HourlySign\HourlySign\obj\Debug\HourlySign.csproj.
 C:\Users\Thuy\Desktop\Latosha\HourlySign\HourlySign\obj\Debug\HourlySign.exe
 C:\Users\Thuy\Desktop\Latosha\HourlySign\HourlySign\obj\Debug\HourlySign.pdb
 C:\Users\Thuy\Desktop\Latosha\HourlySign\HourlySign\obj\Debug\HourlySign.csprojResolveAssemblyReference.cache
+C:\Users\Nicholas Hershy\Documents\Visual Studio 2015\Projects\HourlySignin\obj\Debug\HourlySign.csprojResolveAssemblyReference.cache

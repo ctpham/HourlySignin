@@ -18,6 +18,8 @@ namespace HourlySign
         private SortedSet<DateTime> _dateTimeSet;
         private string _filePath;
         private string _projectDirectory;
+        private string _outFileLocation;
+        private EnableRun _enableRun;
 
         public Form1()
         {
@@ -31,6 +33,7 @@ namespace HourlySign
             _dateTimeSet = new SortedSet<DateTime>();
             _projectDirectory = Directory.GetParent(
                                 Directory.GetCurrentDirectory()).Parent.FullName;
+            _enableRun = new EnableRun();
         }
 
         private void btnOpenFile_Click(object sender, EventArgs e)
@@ -38,6 +41,19 @@ namespace HourlySign
             _filePath = _importer.OpenFile();
             txtFileName.Text = " " + Path.GetFileName(_filePath);
             isValidPath();
+        }
+
+        private void btnOutputFileLocation_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog folderBrowser = new FolderBrowserDialog();
+            if (folderBrowser.ShowDialog() == DialogResult.OK)
+            {
+                _outFileLocation = folderBrowser.SelectedPath;
+                txtOutfile.Text = _outFileLocation;
+                _enableRun.OutFileLocation = true;
+                if (_enableRun.BothSelected())
+                    btnRun.Enabled = true;
+            }
         }
 
         //"Main()"
@@ -149,7 +165,9 @@ namespace HourlySign
         {
             Path.GetFullPath(_filePath);
             //if exception is not thrown:
-            btnRun.Enabled = true;
+            _enableRun.FileSelected = true;
+            if (_enableRun.BothSelected())
+                btnRun.Enabled = true;
         }
 
         //To debug output
@@ -165,12 +183,13 @@ namespace HourlySign
         private void printWeeks(List<Week> weeks)
         {
             //clear contents of file from last run (since we always append)
-            string weeksTxt = _projectDirectory + "\\Resources\\weeks.txt";
-            File.WriteAllText(weeksTxt, String.Empty);
+            //string weeksTxt = _projectDirectory + "\\Resources\\weeks.txt";
+            _outFileLocation = _outFileLocation + @"\Weekly Data.txt";
+            File.WriteAllText(_outFileLocation, String.Empty);
 
             foreach (Week week in weeks) // Loops through each week and then prints itself
             {
-                week.Print();
+                week.Print(_outFileLocation);
             }
         }
     }

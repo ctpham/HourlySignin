@@ -106,8 +106,7 @@ namespace HourlySign
             }
         }
 
-        //TODO
-        public void Print()
+        public void Print(String fileLocation)
         {
             String headerPadding = ("              ");
             String monday = String.Format("{0:M/d}", _dateRange[1]);
@@ -134,7 +133,8 @@ namespace HourlySign
                                   "10:00-10:59 > ",
                                   "Totals      > "};
 
-            string outputFile = _projectDirectory + "\\Resources\\weeks.txt";
+            //string outputFile = _projectDirectory + "\\Resources\\weeks.txt";
+            string outputFile = fileLocation;
             using (TextWriter tw = new StreamWriter(outputFile, append: true))
             {
                 //print header here of weekdays
