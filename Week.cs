@@ -32,7 +32,7 @@ using System.Threading.Tasks;
 
 namespace HourlySign
 {
-    class Week
+    class Week : IComparable<Week>
     {
         private int _weeklyTotal;
         public int[,] HourlyTimeframe { get; }
@@ -160,6 +160,12 @@ namespace HourlySign
         private String padBoth(String s, int leftPad, int rightPad)
         {
             return s.PadLeft(leftPad, ' ').PadRight(rightPad, ' ');
+        }
+
+        //Sorts by largest weekly total
+        public int CompareTo(Week other)
+        {
+            return this._weeklyTotal.CompareTo(other._weeklyTotal) * -1;
         }
     }
 }

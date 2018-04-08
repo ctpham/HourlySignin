@@ -34,6 +34,7 @@ namespace HourlySign
             _projectDirectory = Directory.GetParent(
                                 Directory.GetCurrentDirectory()).Parent.FullName;
             _enableRun = new EnableRun();
+            rdoChronological.Checked = true;
         }
 
         private void btnOpenFile_Click(object sender, EventArgs e)
@@ -71,6 +72,9 @@ namespace HourlySign
             totalEachDay(dataWeeks);
 
             totalEachWeek(dataWeeks);
+
+            if (rdoBusiest.Checked)
+                dataWeeks.Sort();
 
             printWeeks(dataWeeks);
 
