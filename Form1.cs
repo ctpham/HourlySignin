@@ -78,6 +78,8 @@ namespace HourlySign
 
             printWeeks(dataWeeks);
 
+            calculateMonthlySummary(dataWeeks);
+
             //Debugging
             //string outputFile = _projectDirectory + "\\Resources\\output_data.txt";
             //printData(outputFile);
@@ -194,6 +196,36 @@ namespace HourlySign
             foreach (Week week in weeks) // Loops through each week and then prints itself
             {
                 week.Print(_outFileLocation);
+            }
+        }
+
+        private void calculateMonthlySummary(List <Week> weeks)
+        {
+            var monthlySummary = new Dictionary<DateTime, int>();
+            foreach (Week week in weeks)
+            {
+                foreach(DayAndTotal dayAndtotal in week.getDayAndTotal())
+                {
+                    if (monthlySummary.ContainsKey(dayAndtotal.YearAndMonth))
+                    {
+                        monthlySummary[dayAndtotal.YearAndMonth] += dayAndtotal.Total;
+                    }
+                    else
+                    {
+                        monthlySummary.Add(dayAndtotal.YearAndMonth, dayAndtotal.Total);
+                    }
+                }
+            }
+
+            using (TextWriter tw = new StreamWriter(_outFileLocation, append: true))
+            {
+                tw.WriteLine("MONTHLY TOTALS:");
+                foreach (KeyValuePair<DateTime, int> entry in monthlySummary)
+                {
+                    tw.WriteLine(entry.Key.Year + " " +
+                                    entry.Key.ToString("MMMM").PadRight(12) +
+                                    entry.Value.ToString());
+                }
             }
         }
     }

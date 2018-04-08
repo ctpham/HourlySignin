@@ -28,7 +28,7 @@ using System.Threading.Tasks;
 //HourlyTimeframe[x][3] is Wednesday
 //HourlyTimeframe[x][4] is Thursday
 //HourlyTimeframe[x][5] is Friday
-//HourlyTimeframe[x][6] is Monday
+//HourlyTimeframe[x][6] is Saturday
 
 namespace HourlySign
 {
@@ -157,9 +157,18 @@ namespace HourlySign
             }
         }
 
-        private String padBoth(String s, int leftPad, int rightPad)
+        public List<DayAndTotal> getDayAndTotal()
         {
-            return s.PadLeft(leftPad, ' ').PadRight(rightPad, ' ');
+            List<DayAndTotal> dayAndTotal = new List<DayAndTotal>();
+            for (int i = 1; i < _dateRange.Capacity - 1; i++)
+            {
+                DateTime aSingleDay = _dateRange[i];
+                //Day is set to 1 because we only care about month and year here
+                DateTime newDt = new DateTime(aSingleDay.Year, aSingleDay.Month, 1);
+                int total = HourlyTimeframe[14, i];
+                dayAndTotal.Add(new DayAndTotal(newDt, total));
+            }
+            return dayAndTotal;
         }
 
         //Sorts by largest weekly total

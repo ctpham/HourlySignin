@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CACE.cs" />
+    <Compile Include="DayAndTotal.cs" />
     <Compile Include="EnableRun.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>

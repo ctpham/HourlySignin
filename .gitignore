@@ -15,3 +15,5 @@ obj/Debug/HourlySign.pdb
 *.ide
 *.cache
 *.exe
+.vs/HourlySign/v15/Server/sqlite3/storage.*
+obj/Debug/*
