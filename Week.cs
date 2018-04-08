@@ -34,8 +34,8 @@ namespace HourlySign
 {
     class Week
     {
+        private int _weeklyTotal;
         public int[,] HourlyTimeframe { get; }
-        private bool _hasData;
         List<DateTime> _dateRange;
         private string _projectDirectory = Directory.GetParent(
                                            Directory.GetCurrentDirectory()).Parent.FullName;
@@ -44,7 +44,6 @@ namespace HourlySign
         {
             HourlyTimeframe = new int[15,7];
             _dateRange = new List<DateTime>();
-            _hasData = false;
         }
 
         public void SetWeekRange(DateTime dt)
@@ -99,6 +98,14 @@ namespace HourlySign
             }
         }
 
+        public void TotalThisWeek()
+        {
+            for (int dayOfWeek = 0; dayOfWeek < HourlyTimeframe.GetLength(1); dayOfWeek++)
+            {
+                _weeklyTotal += HourlyTimeframe[14, dayOfWeek];
+            }
+        }
+
         //TODO
         public void Print()
         {
@@ -145,6 +152,7 @@ namespace HourlySign
                     }
                     tw.Write(tw.NewLine);
                 }
+                tw.WriteLine("WEEKLY TOTAL: " + _weeklyTotal);
                 tw.WriteLine("");
             }
         }

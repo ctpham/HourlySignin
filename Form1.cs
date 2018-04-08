@@ -54,6 +54,8 @@ namespace HourlySign
 
             totalEachDay(dataWeeks);
 
+            totalEachWeek(dataWeeks);
+
             printWeeks(dataWeeks);
 
             //Debugging
@@ -119,6 +121,14 @@ namespace HourlySign
             foreach (Week week in dataWeeks)
             {
                 week.TotalEachDay();
+            }
+        }
+
+        private void totalEachWeek(List<Week> dataWeeks)
+        {
+            foreach (Week week in dataWeeks)
+            {
+                week.TotalThisWeek();
             }
         }
 

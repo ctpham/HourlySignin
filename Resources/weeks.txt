@@ -16,6 +16,7 @@
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 0      0      4      2      0      
+WEEKLY TOTAL: 6
 
                      July 2016
               M      T      W      R      F
@@ -35,6 +36,7 @@ Totals      > 0      0      4      2      0
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 0      0      5      4      0      
+WEEKLY TOTAL: 9
 
                      July 2016
               M      T      W      R      F
@@ -54,6 +56,7 @@ Totals      > 0      0      5      4      0
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 0      0      0      0      2      
+WEEKLY TOTAL: 2
 
                      July 2016
               M      T      W      R      F
@@ -73,6 +76,7 @@ Totals      > 0      0      0      0      2
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 5      6      2      4      2      
+WEEKLY TOTAL: 19
 
                    August 2016
               M      T      W      R      F
@@ -92,6 +96,7 @@ Totals      > 5      6      2      4      2
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 8      0      11     11     4      
+WEEKLY TOTAL: 34
 
                 September 2016
               M      T      W      R      F
@@ -111,6 +116,7 @@ Totals      > 8      0      11     11     4
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 0      13     10     14     7      
+WEEKLY TOTAL: 44
 
                 September 2016
               M      T      W      R      F
@@ -130,6 +136,7 @@ Totals      > 0      13     10     14     7
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 14     15     16     23     8      
+WEEKLY TOTAL: 76
 
                 September 2016
               M      T      W      R      F
@@ -149,6 +156,7 @@ Totals      > 14     15     16     23     8
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 27     16     12     9      1      
+WEEKLY TOTAL: 65
 
                 September 2016
               M      T      W      R      F
@@ -168,6 +176,7 @@ Totals      > 27     16     12     9      1
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 16     28     26     26     5      
+WEEKLY TOTAL: 101
 
                   October 2016
               M      T      W      R      F
@@ -187,6 +196,7 @@ Totals      > 16     28     26     26     5
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 25     28     15     26     7      
+WEEKLY TOTAL: 101
 
                   October 2016
               M      T      W      R      F
@@ -206,6 +216,7 @@ Totals      > 25     28     15     26     7
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 0      24     19     16     4      
+WEEKLY TOTAL: 63
 
                   October 2016
               M      T      W      R      F
@@ -225,6 +236,7 @@ Totals      > 0      24     19     16     4
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 14     28     28     22     3      
+WEEKLY TOTAL: 95
 
                   October 2016
               M      T      W      R      F
@@ -244,6 +256,7 @@ Totals      > 14     28     28     22     3
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 18     19     14     18     4      
+WEEKLY TOTAL: 73
 
                   October 2016
               M      T      W      R      F
@@ -263,6 +276,7 @@ Totals      > 18     19     14     18     4
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 16     13     23     13     3      
+WEEKLY TOTAL: 68
 
                  November 2016
               M      T      W      R      F
@@ -282,6 +296,7 @@ Totals      > 16     13     23     13     3
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 18     15     13     24     0      
+WEEKLY TOTAL: 70
 
                  November 2016
               M      T      W      R      F
@@ -301,6 +316,7 @@ Totals      > 18     15     13     24     0
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 24     17     14     21     0      
+WEEKLY TOTAL: 76
 
                  November 2016
               M      T      W      R      F
@@ -320,6 +336,7 @@ Totals      > 24     17     14     21     0
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 10     17     5      0      0      
+WEEKLY TOTAL: 32
 
                  November 2016
               M      T      W      R      F
@@ -339,6 +356,7 @@ Totals      > 10     17     5      0      0
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 13     23     16     20     4      
+WEEKLY TOTAL: 76
 
                  December 2016
               M      T      W      R      F
@@ -358,6 +376,7 @@ Totals      > 13     23     16     20     4
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 10     21     8      7      6      
+WEEKLY TOTAL: 52
 
                  December 2016
               M      T      W      R      F
@@ -377,6 +396,7 @@ Totals      > 10     21     8      7      6
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 10     7      5      7      0      
+WEEKLY TOTAL: 29
 
                   January 2017
               M      T      W      R      F
@@ -396,6 +416,7 @@ Totals      > 10     7      5      7      0
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 1      5      14     8      0      
+WEEKLY TOTAL: 28
 
                   January 2017
               M      T      W      R      F
@@ -415,6 +436,7 @@ Totals      > 1      5      14     8      0
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 0      4      6      1      0      
+WEEKLY TOTAL: 11
 
                   January 2017
               M      T      W      R      F
@@ -434,6 +456,7 @@ Totals      > 0      4      6      1      0
 09:00-09:59 > 0      1      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 8      16     10     10     10     
+WEEKLY TOTAL: 54
 
                   January 2017
               M      T      W      R      F
@@ -453,6 +476,7 @@ Totals      > 8      16     10     10     10
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 7      21     10     15     2      
+WEEKLY TOTAL: 55
 
                  February 2017
               M      T      W      R      F
@@ -472,6 +496,7 @@ Totals      > 7      21     10     15     2
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 0      10     12     12     12     
+WEEKLY TOTAL: 46
 
                  February 2017
               M      T      W      R      F
@@ -491,6 +516,7 @@ Totals      > 0      10     12     12     12
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 25     23     18     6      0      
+WEEKLY TOTAL: 72
 
                  February 2017
               M      T      W      R      F
@@ -510,6 +536,7 @@ Totals      > 25     23     18     6      0
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 0      20     13     18     3      
+WEEKLY TOTAL: 54
 
                  February 2017
               M      T      W      R      F
@@ -529,6 +556,7 @@ Totals      > 0      20     13     18     3
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 14     30     22     19     15     
+WEEKLY TOTAL: 100
 
                     March 2017
               M      T      W      R      F
@@ -548,6 +576,7 @@ Totals      > 14     30     22     19     15
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 11     23     16     32     8      
+WEEKLY TOTAL: 90
 
                     March 2017
               M      T      W      R      F
@@ -567,6 +596,7 @@ Totals      > 11     23     16     32     8
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 8      23     20     13     1      
+WEEKLY TOTAL: 65
 
                     March 2017
               M      T      W      R      F
@@ -586,6 +616,7 @@ Totals      > 8      23     20     13     1
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 9      17     21     14     5      
+WEEKLY TOTAL: 66
 
                     April 2017
               M      T      W      R      F
@@ -605,6 +636,7 @@ Totals      > 9      17     21     14     5
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 11     16     15     17     4      
+WEEKLY TOTAL: 63
 
                     April 2017
               M      T      W      R      F
@@ -624,6 +656,7 @@ Totals      > 11     16     15     17     4
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 22     18     23     19     9      
+WEEKLY TOTAL: 91
 
                     April 2017
               M      T      W      R      F
@@ -643,6 +676,7 @@ Totals      > 22     18     23     19     9
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 0      25     20     17     8      
+WEEKLY TOTAL: 70
 
                     April 2017
               M      T      W      R      F
@@ -662,6 +696,7 @@ Totals      > 0      25     20     17     8
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 18     17     26     23     13     
+WEEKLY TOTAL: 97
 
                     April 2017
               M      T      W      R      F
@@ -681,6 +716,7 @@ Totals      > 18     17     26     23     13
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 2      15     11     15     10     
+WEEKLY TOTAL: 53
 
                       May 2017
               M      T      W      R      F
@@ -700,6 +736,7 @@ Totals      > 2      15     11     15     10
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 16     8      7      0      0      
+WEEKLY TOTAL: 31
 
                       May 2017
               M      T      W      R      F
@@ -719,6 +756,7 @@ Totals      > 16     8      7      0      0
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 1      2      1      2      3      
+WEEKLY TOTAL: 9
 
                       May 2017
               M      T      W      R      F
@@ -738,6 +776,7 @@ Totals      > 1      2      1      2      3
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 8      10     6      12     13     
+WEEKLY TOTAL: 49
 
                       May 2017
               M      T      W      R      F
@@ -757,6 +796,7 @@ Totals      > 8      10     6      12     13
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 0      10     9      11     9      
+WEEKLY TOTAL: 39
 
                      June 2017
               M      T      W      R      F
@@ -776,6 +816,7 @@ Totals      > 0      10     9      11     9
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 8      9      6      9      8      
+WEEKLY TOTAL: 40
 
                      June 2017
               M      T      W      R      F
@@ -795,6 +836,7 @@ Totals      > 8      9      6      9      8
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 13     12     4      5      5      
+WEEKLY TOTAL: 39
 
                      June 2017
               M      T      W      R      F
@@ -814,6 +856,7 @@ Totals      > 13     12     4      5      5
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 7      7      10     7      1      
+WEEKLY TOTAL: 32
 
                      June 2017
               M      T      W      R      F
@@ -833,6 +876,7 @@ Totals      > 7      7      10     7      1
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 2      1      2      2      0      
+WEEKLY TOTAL: 7
 
                      July 2017
               M      T      W      R      F
@@ -852,6 +896,7 @@ Totals      > 2      1      2      2      0
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 6      0      4      9      10     
+WEEKLY TOTAL: 29
 
                      July 2017
               M      T      W      R      F
@@ -871,6 +916,7 @@ Totals      > 6      0      4      9      10
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 6      4      4      6      5      
+WEEKLY TOTAL: 25
 
                      July 2017
               M      T      W      R      F
@@ -890,6 +936,7 @@ Totals      > 6      4      4      6      5
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 5      9      5      2      2      
+WEEKLY TOTAL: 23
 
                      July 2017
               M      T      W      R      F
@@ -909,6 +956,7 @@ Totals      > 5      9      5      2      2
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 9      8      5      8      4      
+WEEKLY TOTAL: 34
 
                      July 2017
               M      T      W      R      F
@@ -928,6 +976,7 @@ Totals      > 9      8      5      8      4
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 7      5      5      2      3      
+WEEKLY TOTAL: 22
 
                    August 2017
               M      T      W      R      F
@@ -947,6 +996,7 @@ Totals      > 7      5      5      2      3
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 3      6      4      8      3      
+WEEKLY TOTAL: 24
 
                    August 2017
               M      T      W      R      F
@@ -966,6 +1016,7 @@ Totals      > 3      6      4      8      3
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 11     7      14     5      0      
+WEEKLY TOTAL: 37
 
                 September 2017
               M      T      W      R      F
@@ -985,6 +1036,7 @@ Totals      > 11     7      14     5      0
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 0      14     12     12     4      
+WEEKLY TOTAL: 42
 
                 September 2017
               M      T      W      R      F
@@ -1004,6 +1056,7 @@ Totals      > 0      14     12     12     4
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 21     19     13     26     4      
+WEEKLY TOTAL: 83
 
                 September 2017
               M      T      W      R      F
@@ -1023,6 +1076,7 @@ Totals      > 21     19     13     26     4
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 27     31     17     16     6      
+WEEKLY TOTAL: 97
 
                 September 2017
               M      T      W      R      F
@@ -1042,6 +1096,7 @@ Totals      > 27     31     17     16     6
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 17     17     12     15     8      
+WEEKLY TOTAL: 69
 
                   October 2017
               M      T      W      R      F
@@ -1061,6 +1116,7 @@ Totals      > 17     17     12     15     8
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 24     22     20     19     7      
+WEEKLY TOTAL: 92
 
                   October 2017
               M      T      W      R      F
@@ -1080,6 +1136,7 @@ Totals      > 24     22     20     19     7
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 0      18     12     20     5      
+WEEKLY TOTAL: 55
 
                   October 2017
               M      T      W      R      F
@@ -1099,6 +1156,7 @@ Totals      > 0      18     12     20     5
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 9      24     9      16     2      
+WEEKLY TOTAL: 60
 
                   October 2017
               M      T      W      R      F
@@ -1118,6 +1176,7 @@ Totals      > 9      24     9      16     2
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 18     10     18     13     7      
+WEEKLY TOTAL: 66
 
                   October 2017
               M      T      W      R      F
@@ -1137,6 +1196,7 @@ Totals      > 18     10     18     13     7
 09:00-09:59 > 2      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 8      20     28     10     2      
+WEEKLY TOTAL: 68
 
                  November 2017
               M      T      W      R      F
@@ -1156,6 +1216,7 @@ Totals      > 8      20     28     10     2
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 18     16     13     20     0      
+WEEKLY TOTAL: 67
 
                  November 2017
               M      T      W      R      F
@@ -1175,6 +1236,7 @@ Totals      > 18     16     13     20     0
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 17     25     14     20     3      
+WEEKLY TOTAL: 79
 
                  November 2017
               M      T      W      R      F
@@ -1194,6 +1256,7 @@ Totals      > 17     25     14     20     3
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 11     11     0      0      0      
+WEEKLY TOTAL: 22
 
                  November 2017
               M      T      W      R      F
@@ -1213,6 +1276,7 @@ Totals      > 11     11     0      0      0
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 15     20     8      16     6      
+WEEKLY TOTAL: 65
 
                  December 2017
               M      T      W      R      F
@@ -1232,6 +1296,7 @@ Totals      > 15     20     8      16     6
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 1      0      0      0      0      
 Totals      > 14     17     10     18     7      
+WEEKLY TOTAL: 66
 
                  December 2017
               M      T      W      R      F
@@ -1251,6 +1316,7 @@ Totals      > 14     17     10     18     7
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 17     19     7      7      0      
+WEEKLY TOTAL: 50
 
                   January 2018
               M      T      W      R      F
@@ -1270,6 +1336,7 @@ Totals      > 17     19     7      7      0
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 0      0      0      6      0      
+WEEKLY TOTAL: 6
 
                   January 2018
               M      T      W      R      F
@@ -1289,6 +1356,7 @@ Totals      > 0      0      0      6      0
 09:00-09:59 > 1      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 10     7      7      15     3      
+WEEKLY TOTAL: 42
 
                   January 2018
               M      T      W      R      F
@@ -1308,6 +1376,7 @@ Totals      > 10     7      7      15     3
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 13     8      14     10     2      
+WEEKLY TOTAL: 47
 
                  February 2018
               M      T      W      R      F
@@ -1327,6 +1396,7 @@ Totals      > 13     8      14     10     2
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 24     9      12     14     1      
+WEEKLY TOTAL: 60
 
                  February 2018
               M      T      W      R      F
@@ -1346,6 +1416,7 @@ Totals      > 24     9      12     14     1
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 10     10     14     6      2      
+WEEKLY TOTAL: 42
 
                  February 2018
               M      T      W      R      F
@@ -1365,6 +1436,7 @@ Totals      > 10     10     14     6      2
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 0      15     17     14     3      
+WEEKLY TOTAL: 49
 
                  February 2018
               M      T      W      R      F
@@ -1384,6 +1456,7 @@ Totals      > 0      15     17     14     3
 09:00-09:59 > 0      0      0      1      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 16     16     12     9      0      
+WEEKLY TOTAL: 53
 
                     March 2018
               M      T      W      R      F
@@ -1403,6 +1476,7 @@ Totals      > 16     16     12     9      0
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 18     13     15     2      7      
+WEEKLY TOTAL: 55
 
                     March 2018
               M      T      W      R      F
@@ -1422,6 +1496,7 @@ Totals      > 18     13     15     2      7
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 0      1      3      0      2      
+WEEKLY TOTAL: 6
 
                     March 2018
               M      T      W      R      F
@@ -1441,6 +1516,7 @@ Totals      > 0      1      3      0      2
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 9      19     0      17     6      
+WEEKLY TOTAL: 51
 
                     March 2018
               M      T      W      R      F
@@ -1460,4 +1536,5 @@ Totals      > 9      19     0      17     6
 09:00-09:59 > 0      0      0      0      0      
 10:00-10:59 > 0      0      0      0      0      
 Totals      > 25     0      0      0      0      
+WEEKLY TOTAL: 25
 
