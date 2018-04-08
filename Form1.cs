@@ -61,9 +61,10 @@ namespace HourlySign
         private void btnRun_Click(object sender, EventArgs e)
         {
             _caces = _importer.QueryData(_filePath);
-            createDateTimeSet();
 
             _caces.Sort();
+
+            createDateTimeSet();
 
             List<Week> validWeeks = createValidWeeks();
 
@@ -78,7 +79,9 @@ namespace HourlySign
 
             printWeeks(dataWeeks);
 
-            calculateMonthlySummary(dataWeeks);
+            printAndCalculateMonthlySummary(dataWeeks);
+            printReasonTotals();
+            printSubjectTotals();
 
             //Debugging
             //string outputFile = _projectDirectory + "\\Resources\\output_data.txt";
@@ -199,7 +202,7 @@ namespace HourlySign
             }
         }
 
-        private void calculateMonthlySummary(List <Week> weeks)
+        private void printAndCalculateMonthlySummary(List <Week> weeks)
         {
             var monthlySummary = new Dictionary<DateTime, int>();
             foreach (Week week in weeks)
@@ -219,13 +222,76 @@ namespace HourlySign
 
             using (TextWriter tw = new StreamWriter(_outFileLocation, append: true))
             {
-                tw.WriteLine("MONTHLY TOTALS:");
+                tw.WriteLine("SUMMARY OF MONTHLY TOTALS:");
                 foreach (KeyValuePair<DateTime, int> entry in monthlySummary)
                 {
                     tw.WriteLine(entry.Key.Year + " " +
-                                    entry.Key.ToString("MMMM").PadRight(12) +
-                                    entry.Value.ToString());
+                                 entry.Key.ToString("MMMM").PadRight(12) +
+                                 entry.Value.ToString());
                 }
+                tw.WriteLine("");
+            }
+        }
+
+        private void printReasonTotals()
+        {
+            var reasonCount = new Dictionary<string, int>();
+            foreach (CACE cace in _caces)
+            {
+                if (reasonCount.ContainsKey(cace.Reason))
+                {
+                    reasonCount[cace.Reason]++;
+                }
+                else
+                {
+                    reasonCount.Add(cace.Reason, 1);
+                }
+            }
+
+            using (TextWriter tw = new StreamWriter(_outFileLocation, append: true))
+            {
+                tw.WriteLine("SUMMARY OF REASON TOTALS:");
+                foreach (KeyValuePair<string, int> entry in reasonCount)
+                {
+                    string key = entry.Key;
+                    if (!key.Equals(""))
+                    {
+                        tw.WriteLine(entry.Key.ToString().PadRight(40) +
+                                     entry.Value.ToString());
+                    }
+                }
+                tw.WriteLine("");
+            }
+        }
+
+        private void printSubjectTotals()
+        {
+            var subjectCount = new Dictionary<string, int>();
+            foreach (CACE cace in _caces)
+            {
+                if (subjectCount.ContainsKey(cace.Subject))
+                {
+                    subjectCount[cace.Subject]++;
+                }
+                else
+                {
+                    subjectCount.Add(cace.Subject, 1);
+                }
+            }
+
+            using (TextWriter tw = new StreamWriter(_outFileLocation, append: true))
+            {
+                tw.WriteLine("SUMMARY OF SUBJECT TOTALS:");
+                foreach (KeyValuePair<string, int> entry in subjectCount)
+                {
+                    string key = entry.Key;
+                    if (!key.Equals(""))
+                    {
+                        tw.WriteLine(entry.Key.ToString().PadRight(40) +
+                                     entry.Value.ToString());
+                    }
+                }
+                tw.WriteLine("");
             }
         }
     }
