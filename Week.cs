@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+
 
 //HourlyTimeframe[0][x] is between 9:00-9:59 AM
 //HourlyTimeframe[1][x] is between 10:00-10:59 AM
@@ -30,17 +32,18 @@ using System.Threading.Tasks;
 
 namespace HourlySign
 {
-    class Week
+    class Week : IComparable<Week>
     {
+        private int _weeklyTotal;
         public int[,] HourlyTimeframe { get; }
-        private bool _hasData;
         List<DateTime> _dateRange;
+        private string _projectDirectory = Directory.GetParent(
+                                           Directory.GetCurrentDirectory()).Parent.FullName;
 
         public Week()
         {
             HourlyTimeframe = new int[15,7];
             _dateRange = new List<DateTime>();
-            _hasData = false;
         }
 
         public void SetWeekRange(DateTime dt)
@@ -67,8 +70,13 @@ namespace HourlySign
                 if (dt.Date == dtOfWeek.Date)
                 {
                     int hour = hourToArrayElement(dt.Hour);
-                    HourlyTimeframe[hour, day] += 1;
-                    break;
+                    //Prevents accumulating data of students who
+                    //signed in before 9 AM or after 11 PM
+                    if (hour >= 0 && hour <= 13)
+                    {
+                        HourlyTimeframe[hour, day] += 1;
+                        break;
+                    }
                 }
                 day++;
             }
@@ -90,17 +98,74 @@ namespace HourlySign
             }
         }
 
-        //TODO
-        public void Print()
+        public void TotalThisWeek()
         {
-            //print header here of weekdays
-            for (int hourRange = 0; hourRange < HourlyTimeframe.GetLength(0); hourRange++)
+            for (int dayOfWeek = 0; dayOfWeek < HourlyTimeframe.GetLength(1); dayOfWeek++)
             {
-                for (int dayOfWeek = 0; dayOfWeek < HourlyTimeframe.GetLength(1); dayOfWeek++)
-                {
-                    //TODO
-                }
+                _weeklyTotal += HourlyTimeframe[14, dayOfWeek];
             }
+        }
+
+        public void Print(String fileLocation)
+        {
+            String headerPadding = ("              ");
+            String monday = String.Format("{0:M/d}", _dateRange[1]);
+            String tuesday = String.Format("{0:M/d}", _dateRange[2]);
+            String wednesday = String.Format("{0:M/d}", _dateRange[3]);
+            String thursday = String.Format("{0:M/d}", _dateRange[4]);
+            String friday = String.Format("{0:M/d}", _dateRange[5]);
+
+            String monthYear = _dateRange[0].ToString("MMMM") + " " + _dateRange[0].Year;
+
+            String[] timestamp = {"09:00-09:59 > ",
+                                  "10:00-10:59 > ",
+                                  "11:00-11:59 > ",
+                                  "12:00-12:59 > ",
+                                  "01:00-01:59 > ",
+                                  "02:00-02:59 > ",
+                                  "03:00-03:59 > ",
+                                  "04:00-04:59 > ",
+                                  "05:00-05:59 > ",
+                                  "06:00-06:59 > ",
+                                  "07:00-07:59 > ",
+                                  "08:00-08:59 > ",
+                                  "09:00-09:59 > ",
+                                  "10:00-10:59 > ",
+                                  "Totals      > "};
+
+            //string outputFile = _projectDirectory + "\\Resources\\weeks.txt";
+            string outputFile = fileLocation;
+            using (TextWriter tw = new StreamWriter(outputFile, append: true))
+            {
+                //print header here of weekdays
+                tw.WriteLine(monthYear.PadLeft(30));
+                tw.WriteLine(headerPadding + "M".PadRight(7) + "T".PadRight(7) + 
+                             "W".PadRight(7) + "R".PadRight(7) + "F");
+                tw.WriteLine(headerPadding + monday.PadRight(7) + tuesday.PadRight(7) +
+                             wednesday.PadRight(7) + thursday.PadRight(7) + friday);
+                for (int hourRange = 0; hourRange < HourlyTimeframe.GetLength(0); hourRange++)
+                {
+                    tw.Write(timestamp[hourRange]);
+                    for (int dayOfWeek = 1; dayOfWeek < HourlyTimeframe.GetLength(1)-1; dayOfWeek++)
+                    {
+                        tw.Write(HourlyTimeframe[hourRange, dayOfWeek].ToString().PadRight(7));
+                    }
+                    tw.Write(tw.NewLine);
+                }
+                tw.WriteLine("WEEKLY TOTAL: " + _weeklyTotal);
+                tw.WriteLine("");
+            }
+        }
+
+        private String padBoth(String s, int leftPad, int rightPad)
+        {
+            return s.PadLeft(leftPad, ' ').PadRight(rightPad, ' ');
+        }
+
+        //Sorts by largest weekly total
+        public int CompareTo(Week other)
+        {
+            return this._weeklyTotal.CompareTo(other._weeklyTotal) * -1;
         }
     }
 }

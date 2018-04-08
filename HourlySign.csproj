@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CACE.cs" />
+    <Compile Include="EnableRun.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +97,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Resources\output_data.txt" />
+    <Content Include="Resources\weeks.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
